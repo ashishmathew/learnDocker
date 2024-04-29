@@ -1,0 +1,33 @@
+Matrix from hell - compatibility issues
+
+Containers : 
+    - docker utilizes lxc containers
+
+Containers vs Virtual machines : 
+    - Containers will share the OS
+    - virtual machine will have its own OS
+    - Containers sit inside VM in big apps
+    - So containers and VMs work together
+                                        VM
+                                        |
+                                        |
+                                        |
+                            -----------------------
+                            |                       |   
+                            |                       |
+                    container                   container . . . . . . . .
+
+Images : 
+    - container run instances of images 
+    - 
+                                        Image
+                                        |
+                                        |
+                                        |
+                            -----------------------
+                            |                       |   
+                            |                       |
+                    container #1                  container#2  . . . . . . . .
+
+
+                    App -- > dockerfile -- > docker image -- > container
