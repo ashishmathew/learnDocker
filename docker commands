@@ -1,0 +1,15 @@
+docker run nginx : to run ngnix container (this will pull the image locally, if not present, and will then run the container)
+docker ps :  list all running containers
+docker ps -a :  previously stopped containers
+docker stop <dockerName>/<containerid> :  to stop a container
+docker rm <dockerName>/<containerid> :  to remove a container
+docker images : list images on host
+docker rmi nginx : remove images
+docker pull nginx : this will only pull the image
+docker exec <containerid> command: run command on "up" docker containers
+docker run -d <image> : run in detached mode
+docker attach <containerid> : attach back to the detached container
+docker run -it centos bash : to go into the shell mode 
+docker run --name my_os <image> : to give container a custom name
+docker images -a -q  : lists all the id
+dockere rmi $(docker images -a -q) : to remove all images in a single command
