@@ -1,0 +1,27 @@
+docker run redis:4.0  (you can specify version with : - this is called a tag)
+
+using docker in an interactive mode : 
+docker run -i app-name (i is used for an interactive mode)
+
+to attach to the containers terminal 
+docker run -it app-name
+
+PORT - mapping
+- Server where docker is installed is called the Docker Host
+- container within a host will have an IP and port 
+- Docker host will have an IP and a port
+- User cannot hit the internal ip of the container from the web-browser
+- so while running the container use the below
+  - docker run -p <docket host port - 80> : <container host : 3306> app-name
+- You cannot map to the same port on the docker host more than once
+
+Volume mapping : 
+  - to map the data to the docker host (so that the data is still persisted even after the container is lost)
+  - docker run -v <docker host file path: container file path> app-name
+
+Inspect a container: 
+  - docker inspect containername
+
+Container logs : 
+  - docker logs containerid
+
